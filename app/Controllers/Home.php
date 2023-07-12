@@ -24,7 +24,8 @@ class Home extends BaseController
         }
 
         $nama = [
-            "pertama" => "irsyad",
+            "title" => "Data User",
+            "breadcrumb" => ["Home", "Users"],
             "user" => $user->paginate(3, 'user'),
             'pager' =>  $this->userModel->pager
         ];
