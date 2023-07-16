@@ -18,6 +18,7 @@ class User extends Model
     public function getUserSearch($keyword = null)
     {
         $builder = $this->table($this->table);
+        $builder->join('kategori', 'kategori.id=' . $this->table . 'id', '');
         $builder->like($this->table . '.nama', $keyword);
         $builder->orLike($this->table . '.hp', $keyword);
         $builder->orLike($this->table . '.alamat', $keyword);

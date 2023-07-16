@@ -33,6 +33,11 @@ $routes->get('/', 'Home::index');
 $routes->post('/', 'Home::simpanUser');
 $routes->delete('/(:num)', 'Home::deleteUser/$1');
 $routes->put('/(:num)', 'Home::editUser/$1');
+
+$routes->get('produk', 'Produk::index');
+$routes->post('produk', 'Produk::createProduk');
+$routes->delete('produk/(:num)', 'Produk::deleteProduk/$1');
+$routes->put('produk/(:num)', 'Produk::updateProduk/$1');
 // $routes->get('/saya', 'Home::saya');
 // $routes->get('/saya/(:any)/(:num)', 'Home::saya/$1/$2');
 // $routes->get('/input', 'Home::sapa');
