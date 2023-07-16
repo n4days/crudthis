@@ -56,7 +56,11 @@
             <?php endforeach ?>
           <?php else : ?>
             <tr>
-              <td colspan="5" align="center">keyword <strong>"<?= $_GET['keyword'] ?>"</strong> tidak ditemukan.</td>
+              <td colspan="5" align="center">
+                <lottie-player src="https://lottie.host/846f5e86-85dd-435e-826a-782e1e153a1a/QdrjzN5QoU.json" background="#FFFFFF" speed="1" style="width:300px;height:300px" loop autoplay direction="1" mode="normal">
+                </lottie-player>
+                keyword <strong>"<?= $_GET['keyword'] ?>"</strong> tidak ditemukan.
+              </td>
             </tr>
           <?php endif ?>
         </tbody>
