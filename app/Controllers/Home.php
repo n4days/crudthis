@@ -35,7 +35,7 @@ class Home extends BaseController
 
     public function simpanUser()
     {
-        // $url = $this->request->getServer('HTTP_REFERER');
+        $url = $this->request->getServer('HTTP_REFERER');
         if (!$this->validate([
             'nama' => [
                 'rules' => 'required|is_unique[user.nama]',
@@ -45,7 +45,7 @@ class Home extends BaseController
                 ]
             ]
         ])) {
-            return redirect()->to('/');
+            return redirect()->to($url)->withInput();
         }
 
         $dataInsert = [

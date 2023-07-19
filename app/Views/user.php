@@ -15,9 +15,9 @@
   <?php if (!empty(session()->getFlashdata('success'))) : ?>
     <div class="alert alert-success"><i class="fas fa-circle-info"></i> <?= session()->getFlashdata('success') ?></div>
   <?php endif ?>
-  <!-- <//?php if ($validation->hasError('nama')) : ?>
+  <?php if ($validation->hasError('nama')) : ?>
     <div class="alert alert-danger"><i class="fas fa-circle-info"></i> Terjadi kesalahan di nama</div>
-  <//?php endif ?> -->
+  <?php endif ?>
 
   <div class="card">
     <div class="card-header">
