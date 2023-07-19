@@ -12,11 +12,13 @@
     </ol>
   </nav>
 
-  <?php
-
-  if (!empty(session()->getFlashdata('success'))) : ?>
+  <?php if (!empty(session()->getFlashdata('success'))) : ?>
     <div class="alert alert-success"><i class="fas fa-circle-info"></i> <?= session()->getFlashdata('success') ?></div>
   <?php endif ?>
+  <!-- <//?php if ($validation->hasError('nama')) : ?>
+    <div class="alert alert-danger"><i class="fas fa-circle-info"></i> Terjadi kesalahan di nama</div>
+  <//?php endif ?> -->
+
   <div class="card">
     <div class="card-header">
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambahModal"><i class="fas fa-add"></i> Tambah</button>

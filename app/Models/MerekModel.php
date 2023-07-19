@@ -22,8 +22,8 @@ class MerekModel extends Model
     // Untuk access table . digunakan untuk Read
     protected $table = 'merek';
     // Untuk penanda primayKey . digunakan untuk Delete
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'merek_id';
     // Untuk penanda isiTable . digunakan untuk Create
-    protected $allowedFields = ['nama'];
+    protected $allowedFields = ['merek_nama'];
     protected $returnType   = 'object';
 }

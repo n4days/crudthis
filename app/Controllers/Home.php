@@ -27,15 +27,26 @@ class Home extends BaseController
             "title" => "Data User",
             "breadcrumb" => ["Home", "Users"],
             "user" => $user->paginate(3, 'user'),
-            'pager' =>  $this->userModel->pager
+            'pager' =>  $this->userModel->pager,
+            'validation' => \Config\Services::validation()
         ];
-        // dd($nama);
         return view('user', $nama);
     }
 
     public function simpanUser()
     {
-        // dd($_POST);
+        // $url = $this->request->getServer('HTTP_REFERER');
+        if (!$this->validate([
+            'nama' => [
+                'rules' => 'required|is_unique[user.nama]',
+                'errors' => [
+                    'required' => "Nama tidak boleh kosong",
+                    'is_unique' => "Nama sudah ada"
+                ]
+            ]
+        ])) {
+            return redirect()->to('/');
+        }
 
         $dataInsert = [
             'nama' => $this->request->getVar('nama'),

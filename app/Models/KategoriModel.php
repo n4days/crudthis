@@ -22,8 +22,8 @@ class KategoriModel extends Model
     // Untuk access table . digunakan untuk Read
     protected $table = 'kategori';
     // Untuk penanda primayKey . digunakan untuk Delete
-    protected $primaryKey = 'merek_id';
+    protected $primaryKey = 'id';
     // Untuk penanda isiTable . digunakan untuk Create
-    protected $allowedFields = ['merek_nama'];
+    protected $allowedFields = ['nama'];
     protected $returnType   = 'object';
 }
